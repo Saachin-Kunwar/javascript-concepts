@@ -59,3 +59,4 @@ let guestUsername = null;
 let greeting = guestUsername ?? "Guest";
 
 console.log(greeting);
+
