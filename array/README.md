@@ -53,3 +53,87 @@ Access element	arr[0]	arr[0]
 Change element	arr[0] = "A"	arr[0] = "A"
 Get length	arr.length	len(arr)
 First index	0	0
+
+// JS Array Constructor
+The new Array() constructor creates an Array object.
+The Difference? new Array() vs Array()
+The short answer is: there is no functional difference between new Array() and Array().
+
+Both commands do the exact same thing and create an array.
+eg const fruits = new Array("Apple", "Banana", "Mango");
+
+console.log(fruits);
+
+javascript aRRAY METHODS
+Array vitra naya data kashari add, remove, update garna js ayyay method use huncha
+python ma list method jastai ho
+note: array method vaneko array  mathi different operations perform garne built in functions hi
+egconst fruits = ["Apple", "Banana"];
+
+fruits.push("Mango");
+
+console.log(fruits);
+
+note: splice() add remove ra replace garna use huncha
+splice() प्रयोग गरेर हामी:
+- Array बाट elements remove गर्न सक्छौँ।
+- नयाँ elements add गर्न सक्छौँ।
+- पुराना elements replace गर्न सक्छौँ।
+यसको basic syntax:array.splice(startIndex, deleteCount, item1, item2);
+यहाँ:
+- startIndex: कुन index बाट सुरु गर्ने?
+- deleteCount: कति वटा elements हटाउने?
+- item1, item2: नयाँ elements add गर्ने (optional)।
+const fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+fruits.splice(1, 2);
+
+console.log(fruits);
+output ["Apple", "Orange"]
+किन?
+- Index 1 बाट सुरु भयो।
+- 2 वटा elements remove भए।
+- Banana र Mango हटे।
+Example B — Element Add गर्ने
+const fruits = ["Apple", "Mango"];
+
+fruits.splice(1, 0, "Banana");
+
+console.log(fruits);
+Splice vs Slice — अत्यन्तै Important
+splice()	slice()
+Original Array change गर्छ	Original Array change गर्दैन
+Add गर्न मिल्छ	Add गर्न मिल्दैन
+Remove गर्न मिल्छ	Original बाट remove गर्दैन
+Replace गर्न मिल्छ	Replace गर्दैन
+
+6. concat() — दुई Array जोड्ने
+JavaScript:
+const boys = ["Ram", "Shyam"];
+const girls = ["Sita", "Gita"];
+
+const students = boys.concat(girls);
+
+console.log(students);
+
+
+Output:
+["Ram", "Shyam", "Sita", "Gita"]
+
+
+Python:
+boys = ["Ram", "Shyam"]girls = ["Sita", "Gita"]students = boys + girls
+
+
+
+concat() ले original arrays परिवर्तन गर्दैन।
+8. आज सिकेका Methods को Revision
+JavaScript	काम	Python equivalent
+push()	अन्तिममा Add	append()
+unshift()	सुरुमा Add	insert(0, ...)
+pop()	अन्तिमबाट Remove	pop()
+shift()	सुरुबाट Remove	pop(0)
+splice()	Add / Remove / Replace	insert(), del, slicing assignment
+slice()	केही भाग निकाल्ने	List slicing
+concat()	Array जोड्ने	+
+join()	String बनाउने	"separator".join()
